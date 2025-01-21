@@ -1,0 +1,133 @@
+/* Contact.css */
+
+.contact {
+  width: 100%;
+  min-height: 100vh; /* Ensure the container takes full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack children vertically by default */
+}
+
+.contact .leftSide {
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px; /* Default height */
+  min-height: 100vh; /* Minimum height for responsiveness */
+}
+
+.contact .rightSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px; /* Responsive padding */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.contact .rightSide h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 700; /* Stronger font weight for better readability */
+  font-size: 2rem; /* Scalable font size */
+  margin: 0 0 20px 0; /* Margin adjustments */
+  text-align: center; /* Center align text */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 600px; /* Restrict maximum width */
+  margin: 0 auto; /* Center form */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+form input,
+form textarea {
+  margin-bottom: 15px; /* Space between form fields */
+  padding: 10px; /* Add padding */
+  border: 1px solid #121619;
+  border-radius: 5px; /* Rounded corners */
+  color: black;
+  width: 100%; /* Full width for responsiveness */
+  box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-weight: bold;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form input:focus,
+textarea:focus {
+  outline: none;
+}
+
+form label {
+  margin-top: 15px;
+  color: grey;
+}
+
+form button {
+  margin-top: 20px;
+  width: 100%; /* Full width button for responsiveness */
+  height: 40px;
+  border: none;
+  background-color: #121619;
+  color: whitesmoke;
+  font-size: 1rem; /* Scalable font size */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Responsive Styles */
+@media (min-width: 769px) {
+  .contact {
+    flex-direction: row; /* Side-by-side layout for larger screens */
+  }
+
+  .contact .leftSide {
+    height: 100%; /* Full height for larger screens */
+  }
+
+  .contact .rightSide {
+    height: 100%; /* Ensure rightSide takes full height */
+    padding: 30px; /* Adjust padding for larger screens */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .leftSide {
+    height: 200px; /* Adjust height for medium screens */
+    min-height: 30vh; /* Minimum height for responsiveness */
+
+  }
+
+  .contact .rightSide {
+    padding: 20px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact .leftSide {
+    height: 150px; /* Smaller height for small screens */
+  }
+
+  .contact .rightSide h1 {
+    font-size: 1.5rem; /* Smaller font size for small screens */
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  form button {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}

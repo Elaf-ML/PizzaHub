@@ -1,0 +1,80 @@
+/* Navbar.css */
+.navbar {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff; /* Adjust color as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Adjust padding as needed */
+  box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.logo {
+  max-height: 50px; /* Adjust logo size as needed */
+}
+
+.menu-button {
+  display: none; /* Hide button on desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* Adjust icon size as needed */
+}
+
+/* Default link styles */
+.links {
+  display: flex;
+
+  font-weight: bold;
+  gap: 20px; /* Space between links */
+  align-items: center; /* Align items vertically in the center */
+}
+
+.links a {
+  text-decoration: none;
+  color: #000; /* Adjust text color as needed */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.links a:hover {
+  color: #f00; /* Adjust hover color as needed */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .links {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff; /* Background color for the dropdown */
+    position: absolute;
+    padding: 10px;
+    font-weight: bold;
+    top: 60px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for dropdown */
+    z-index: 1000; /* Ensure dropdown appears above other content */
+  }
+
+  .links.open {
+    display: flex; /* Show links when open */
+  }
+
+  .menu-button {
+    display: block; /* Show button on mobile */
+  }
+}
+
+/* Ensure the links are visible on desktop */
+@media (min-width: 769px) {
+  .links {
+    display: flex;
+  }
+}
